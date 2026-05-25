@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Pacotes</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background: #f4f4f4;
+        }
+
+        .container{
+            width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+
+        nav{
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        nav a{
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #003366;
+        }
+
+        h1{
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .campo{
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, select{
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button{
+            grid-column: span 2;
+            padding: 12px;
+            background: orange;
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="imagens/logo.png" width="200">
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="quem-somos.html">Quem Somos</a>
+            <a href="contato.html">Contato</a>
+            <a href="buscar-pacotes.html">Buscar Pacotes</a>
+        </nav>
+
+        <h1>Buscar Pacotes de Viagem</h1>
+
+        <form>
+
+            <div class="campo">
+                <label>Origem</label>
+                <input type="text" placeholder="Cidade de origem">
+            </div>
+
+            <div class="campo">
+                <label>Destino</label>
+                <input type="text" placeholder="Cidade de destino">
+            </div>
+
+            <div class="campo">
+                <label>Data de Partida</label>
+                <input type="date">
+            </div>
+
+            <div class="campo">
+                <label>Data de Retorno</label>
+                <input type="date">
+            </div>
+
+            <div class="campo">
+                <label>Quartos</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Quantidade de Adultos</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Quantidade de Crianças</label>
+                <select>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+            <button type="submit">Buscar Pacotes</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
