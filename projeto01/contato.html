@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Contato</title>
+    <title>Contato - JM Viagens</title>
 
     <style>
 
         body{
-            font-family: Arial;
+            font-family: Arial, Helvetica, sans-serif;
             background: #f4f4f4;
         }
 
@@ -19,35 +18,57 @@
             padding: 20px;
         }
 
-        nav{
-            text-align: right;
+        .topo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
         }
 
-        nav a{
-            margin-left: 15px;
+        .menu a{
             text-decoration: none;
-            font-weight: bold;
             color: #003366;
-        }
-
-        form{
-            margin-top: 20px;
-        }
-
-        input, textarea{
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-
-        button{
-            background: orange;
-            border: none;
-            padding: 10px 20px;
-            color: white;
             font-weight: bold;
-            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .barra{
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, orange 30%, #0099cc 30%);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h2{
+            color: orange;
+            margin-bottom: 30px;
+        }
+
+        h3{
+            color: #003366;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            line-height: 1.8;
+            text-align: justify;
+            color: #333;
+        }
+
+        footer{
+            text-align: center;
+            margin-top: 50px;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        .linha-final{
+            width: 100%;
+            height: 15px;
+            background: #0099cc;
+            margin-top: 40px;
         }
 
     </style>
@@ -58,31 +79,49 @@
 
     <div class="container">
 
-        <img src="imagens/logo.png" width="200">
+        <h1 style="color:#003366; font-size:70px;">
+            Contato
+        </h1>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="quem-somos.html">Quem Somos</a>
-            <a href="contato.html">Contato</a>
-            <a href="buscar-pacotes.html">Buscar Pacotes</a>
-        </nav>
+        <div class="topo">
 
-        <h1>Contato</h1>
+            <img src="imagens/logo.png" width="230">
 
-        <form>
+            <div class="menu">
+                <a href="index.html">Home</a> |
+                <a href="quem-somos.html">Quem somos</a> |
+                <a href="contato.html">Contato</a>
+            </div>
 
-            Nome:<br>
-            <input type="text" placeholder="Digite seu nome">
+        </div>
 
-            E-mail:<br>
-            <input type="email" placeholder="Digite seu e-mail">
+        <div class="barra"></div>
 
-            Mensagem:<br>
-            <textarea rows="5"></textarea>
+        <h2>Contato</h2>
 
-            <button type="submit">Enviar</button>
+        <h3>
+            E-mail: jmviagens@jmviagens.com.br
+        </h3>
 
-        </form>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Suspendisse sit amet mollis nisl. Aliquam sit amet diam
+            ac quam dignissim lobortis vel ac sapien. Proin placerat
+            cursus risus. Duis blandit varius hendrerit.
+        </p>
+
+        <p>
+            Vivamus sed placerat turpis, vel viverra neque.
+            Duis at tempor magna, sit amet gravida purus.
+            Nulla facilisi. Vivamus accumsan risus vitae risus
+            blandit venenatis.
+        </p>
+
+        <footer>
+            Todos os direitos reservados
+        </footer>
+
+        <div class="linha-final"></div>
 
     </div>
 
