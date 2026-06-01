@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha primeira página CSS</title>
+
+    <style>
+
+        body{
+            background-color: #d8e78c;
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 40px;
+            color: #4b2c73;
+        }
+
+        .container{
+            display: flex;
+            gap: 50px;
+        }
+
+        .menu{
+            width: 220px;
+        }
+
+        .menu a{
+            display: block;
+            background-color: white;
+            color: #3b2c70;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-right: 35px solid black;
+        }
+
+        .conteudo{
+            max-width: 600px;
+        }
+
+        h1{
+            font-size: 70px;
+            margin-top: 0;
+            line-height: 1;
+        }
+
+        p{
+            font-size: 28px;
+            line-height: 1.4;
+        }
+
+        hr{
+            border: 1px dotted gray;
+        }
+
+        .rodape{
+            font-style: italic;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="menu">
+            <a href="#">Home page</a>
+            <a href="#">Pensamentos</a>
+            <a href="#">Minha cidade</a>
+            <a href="#">Links</a>
+        </div>
+
+        <div class="conteudo">
+
+            <h1>Minha primeira<br>página CSS</h1>
+
+            <p>Bem vindos à minha página estilizada!</p>
+
+            <p>
+                Minha página não contém imagens, mas está
+                estilizada. Ela contém links, que não levam a
+                lugar algum...
+            </p>
+
+            <p>
+                Deveria haver mais textos aqui porém eu
+                ainda não decidi o que escrever.
+            </p>
+
+            <hr>
+
+            <p class="rodape">
+                Construída em 15 de dezembro de 2004<br>
+                por mim mesmo.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
