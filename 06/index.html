@@ -2,26 +2,54 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Tag Div e Span</title>
+    <title>Tag Div</title>
 
     <style>
 
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        h1{
+            margin-left: 50px;
+        }
+
+        /* MENU */
         #menu{
             background-color: #2d3e50;
+            border: 2px solid gray;
             padding: 10px;
+            width: 900px;
+            margin: auto;
         }
 
         #menu a{
             color: white;
             text-decoration: none;
             margin-right: 15px;
+            font-size: 20px;
         }
 
+        /* CONTEÚDO */
         #conteudo{
-            background-color: #CECE7B;
-            width: 400px;
+            background-color: #9AA12A;
+            border: 2px solid gray;
+            width: 900px;
             padding: 15px;
-            font-family: Arial, sans-serif;
+            margin: auto;
+            text-align: justify;
+            font-size: 18px;
+        }
+
+        /* RODAPÉ */
+        #rodape{
+            background-color: #D7B7D7;
+            border: 2px solid gray;
+            width: 900px;
+            padding: 15px;
+            margin: auto;
+            text-align: center;
+            font-size: 20px;
         }
 
     </style>
@@ -31,16 +59,36 @@
 
     <h1>Tag &lt;div&gt;</h1>
 
+    <!-- MENU -->
     <div id="menu">
-        <a href="#">Home</a>
-        <a href="#">Quem Somos</a>
-        <a href="#">Contato</a>
+        <a href="#">Home</a> |
+        <a href="#">Quem Somos</a> |
+        <a href="#">Contato</a> |
+        <a href="#">Desafio</a>
     </div>
 
+    <!-- CONTEÚDO -->
     <div id="conteudo">
-        Lorem Ipsum is simply dummy text of the printing and 
-        typesetting industry. Lorem Ipsum has been the industry's 
-        standard dummy text ever since the 1500s.
+
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text
+        ever since the 1500s, when an unknown printer took a galley of
+        type and scrambled it to make a type specimen book.
+
+        It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was
+        popularised in the 1960s with the release of Letraset sheets
+        containing Lorem Ipsum passages.
+
+        Why do we use it? It is a long established fact that a reader
+        will be distracted by the readable content of a page when looking
+        at its layout.
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <div id="rodape">
+        Copyright © Todos os direitos reservados
     </div>
 
 </body>
