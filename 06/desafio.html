@@ -23,67 +23,82 @@
 
         /* Moldura Verde Escura Externa */
         .moldura-principal {
-            background-color: #0b5a30; /* Verde escuro do fundo */
+            background-color: #0b5a30; 
             width: 100%;
             max-width: 900px;
-            padding: 20px; /* Este padding cria o espaço verde ao redor de todo o conteúdo */
+            padding: 20px; 
             border-radius: 4px;
         }
 
         /* 1. Cabeçalho (Verde Mais Claro) */
         .header {
-            background-color: #118244; /* Verde mais claro */
+            background-color: #118244; 
             color: white;
             text-align: center;
             padding: 25px;
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
-            border: 2px solid #ffffff; /* Opcional: bordinha interna clara se desejar destacar */
+            margin-bottom: 20px; 
+            border: 2px solid #ffffff; 
         }
 
         /* Container que junta a Barra Lateral e o Conteúdo */
         .main-container {
             display: flex;
-            margin-bottom: 20px; /* Espaço abaixo do bloco do meio */
-            gap: 20px; /* Cria o espaço em branco/verde vertical ENTRE a barra lateral e o conteúdo */
+            margin-bottom: 20px; 
+            gap: 20px; 
         }
 
         /* 2. Barra Lateral (Esquerda) */
         .sidebar {
-            background-color: #ffffff; /* Fundo branco ou levemente azulado */
-            width: 25%; /* Largura da barra */
-            padding: 25px 20px;
+            background-color: #ffffff; /* Fundo branco que serve de moldura */
+            width: 25%; 
+            padding: 15px; 
             border: 1px solid #b0c4de;
             min-height: 250px;
         }
 
-        .sidebar ul {
+        /* 3. Conteúdo Principal (Direita) */
+        .content {
+            background-color: #ffffff; /* Fundo branco que serve de moldura */
+            width: 75%; 
+            padding: 15px; /* Ajustado para 15px para igualar à barra lateral */
+            border: 1px solid #b0c4de;
+        }
+
+        /* --- Quadro Cinza Interno (Usado em ambos os lados agora) --- */
+        .quadro-cinza {
+            background-color: #e0e0e0; /* Cor cinza de fundo */
+            padding: 15px;
+            border: 1px solid #a0a0a0; /* Bordinha do quadro cinza */
+            height: 100%; /* Faz o quadro ocupar toda a altura da caixa branca */
+        }
+
+        /* Estilos dos itens da lista (lado esquerdo) */
+        .quadro-cinza ul {
             list-style-position: inside;
         }
 
-        .sidebar li {
+        .quadro-cinza li {
             margin-bottom: 12px;
             color: #333;
         }
 
-        /* 3. Conteúdo Principal (Direita) */
-        .content {
-            background-color: #ffffff;
-            width: 75%; /* Ocupa o restante do espaço */
-            padding: 25px;
-            border: 1px solid #b0c4de;
-        }
-
-        .content p {
+        /* Estilos do texto (lado direito) */
+        .quadro-cinza p {
             margin-bottom: 15px;
             color: #333;
             line-height: 1.5;
         }
+        
+        /* Remove a margem do último parágrafo para não quebrar o espaçamento interno */
+        .quadro-cinza p:last-child {
+            margin-bottom: 0;
+        }
 
         /* 4. Rodapé (Azul Escuro) */
         .footer {
-            background-color: #1a252f; /* Azul escuro/grafite */
+            background-color: #1a252f; 
             color: white;
             text-align: center;
             padding: 15px;
@@ -100,18 +115,24 @@
         </div>
 
         <div class="main-container">
+            
             <div class="sidebar">
-                <ul>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
+                <div class="quadro-cinza">
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="content">
-                <p>Este é o conteúdo principal da página.</p>
-                <p>Adicione mais parágrafos ou elementos conforme necessário.</p>
+                <div class="quadro-cinza">
+                    <p>Este é o conteúdo principal da página.</p>
+                    <p>Adicione mais parágrafos ou elementos conforme necessário.</p>
+                </div>
             </div>
+
         </div>
 
         <div class="footer">
