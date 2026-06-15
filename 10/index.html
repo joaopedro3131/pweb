@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Cards de Notícias</title>
+    <style>
+        /* --- Configurações Gerais da Página --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* Container que envolve todos os cards para organizá-los na tela */
+        .container-noticias {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* --- Aplicação do Box Model no Conteúdo da Postagem (<article>) --- */
+        .card-noticia {
+            background-color: #ffffff;
+            width: 45%;               /* Largura do card */
+            min-width: 300px;         /* Garante que o card não esmague em telas menores */
+            
+            /* Box Model Aplicado: */
+            padding: 15px;            /* Espaçamento interno */
+            border: 1px solid #e0e0e0;/* Borda sutil do card */
+            border-radius: 8px;       /* Cantos arredondados como no exemplo */
+            margin-bottom: 10px;      /* Margem externa inferior */
+            
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra leve para efeito de card */
+            box-sizing: border-box;   /* Garante que padding e border não quebrem o tamanho do card */
+        }
+
+        /* --- Tag Header (Fonte da notícia/Portal) --- */
+        .card-noticia header {
+            font-weight: bold;
+            font-size: 0.9em;
+            color: #0056b3;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 5px;
+        }
+
+        /* --- Propriedade Float na Imagem --- */
+        .card-noticia img {
+            float: right;             /* Alinha a imagem à direita e faz o texto contorná-la */
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-left: 15px;        /* Espaço para o texto não colar na imagem */
+            margin-bottom: 10px;
+        }
+
+        /* --- O Texto da Notícia --- */
+        .card-noticia p {
+            font-size: 0.95em;
+            line-height: 1.4;
+            margin: 0 0 15px 0;       /* Controlando as margens do parágrafo */
+        }
+
+        /* --- Tag Footer (Data da publicação) --- */
+        .card-noticia footer {
+            clear: both;              /* Limpa o float da imagem para o footer ficar sempre abaixo */
+            font-size: 0.8em;
+            color: #777;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Portal de Notícias Fictícias</h1>
+
+    <main class="container-noticias">
+
+        <article class="card-noticia">
+            <header>InfoMoney</header>
+            <img src="https://picsum.photos/100?random=1" alt="Imagem Ilustrativa">
+            <p>Preços no mercado livre operam próximos à estabilidade apesar de seca histórica na região central.</p>
+            <footer>2 horas atrás</footer>
+        </article>
+
+        <article class="card-noticia">
+            <header>G1</header>
+            <img src="https://picsum.photos/100?random=2" alt="Imagem Ilustrativa">
+            <p>Nobel da Paz: conheça nomes cotados para o prêmio deste ano, que será conhecido neste final de semana.</p>
+            <footer>3 horas atrás</footer>
+        </article>
+
+        <article class="card-noticia">
+            <header>CNN Brasil</header>
+            <img src="https://picsum.photos/100?random=3" alt="Imagem Ilustrativa">
+            <p>Três Poderes jamais devem avançar sobre "competências alheias", diz Arthur Lira em pronunciamento oficial.</p>
+            <footer>4 horas atrás</footer>
+        </article>
+
+        <article class="card-noticia">
+            <header>R7.COM</header>
+            <img src="https://picsum.photos/100?random=4" alt="Imagem Ilustrativa">
+            <p>Japão inicia segunda fase de despejo de água tratada da central nuclear de Fukushima de forma controlada.</p>
+            <footer>7 horas atrás</footer>
+        </article>
+
+    </main>
+
+</body>
+</html>
