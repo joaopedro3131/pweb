@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7f8;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #0b4f6c;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Container Body (Retângulo Verde/Teal) */
+        .container-body {
+            background-color: #14a085;
+            width: 850px;
+            height: 480px;
+            position: relative; /* Base de referência para os elementos absolutos internos */
+            padding: 25px;
+            border-radius: 4px;
+        }
+
+        .label-body {
+            color: #0c332b;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* Estilo comum dos quadrados vermelhos */
+        .box-red {
+            background-color: #e74c3c;
+            color: #ffffff;
+            width: 95px;
+            height: 95px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+
+        /* Posição Absoluto */
+        .absolute-box {
+            position: absolute;
+            bottom: 120px;
+            left: 35px;
+        }
+
+        /* Posição Fixo (Posicionado de forma controlada dentro do exemplo) */
+        .fixed-box {
+            position: absolute;
+            top: 25px;
+            left: 190px;
+        }
+
+        /* Container Div (Retângulo Branco à direita) */
+        .container-div {
+            background-color: #ffffff;
+            width: 360px;
+            height: 190px;
+            position: absolute;
+            top: 55px;
+            right: 0; /* Encostado na borda direita conforme o slide */
+            padding: 20px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .label-div {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Posição Relativo */
+        .relative-box {
+            position: relative;
+            top: 5px;
+            left: 45px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Posicionamento</h1>
+
+    <div class="container-body">
+        <span class="label-body">Container body</span>
+        
+        <div class="box-red fixed-box">Fixo</div>
+        
+        <div class="box-red absolute-box">Absoluto</div>
+
+        <div class="container-div">
+            <div class="label-div">Container div</div>
+            <div class="box-red relative-box">Relativo</div>
+        </div>
+    </div>
+
+</body>
+</html>
