@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio: Criando uma Página Web com div</title>
     <style>
-        /* Configurações gerais para resetar as margens padrão */
+        /* Reset de margens padrão */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,82 +14,87 @@
         }
 
         body {
-            padding: 20px;
+            padding: 40px 20px;
             background-color: #f4f4f9;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* Container principal para limitar a largura da página, igual ao slide */
-        .container {
+        /* Moldura Verde Escura Externa */
+        .moldura-principal {
+            background-color: #0b5a30; /* Verde escuro do fundo */
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
+            padding: 20px; /* Este padding cria o espaço verde ao redor de todo o conteúdo */
+            border-radius: 4px;
         }
 
-        /* 1. Cabeçalho (Verde) */
+        /* 1. Cabeçalho (Verde Mais Claro) */
         .header {
-            background-color: #0b8a43;
+            background-color: #118244; /* Verde mais claro */
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             font-size: 24px;
             font-weight: bold;
-            border: 2px solid #ff3333; /* Borda vermelha do exemplo */
-            border-bottom: none; /* Evita sobreposição de bordas */
+            margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+            border: 2px solid #ffffff; /* Opcional: bordinha interna clara se desejar destacar */
         }
 
-        /* Container do meio para colocar a barra lateral e o conteúdo lado a lado */
+        /* Container que junta a Barra Lateral e o Conteúdo */
         .main-container {
             display: flex;
-            width: 100%;
+            margin-bottom: 20px; /* Espaço abaixo do bloco do meio */
+            gap: 20px; /* Cria o espaço em branco/verde vertical ENTRE a barra lateral e o conteúdo */
         }
 
         /* 2. Barra Lateral (Esquerda) */
         .sidebar {
-            background-color: #e6f2ff;
-            width: 25%; /* Ocupa 25% da largura */
-            padding: 20px;
-            border: 2px solid #ff3333;
-            border-bottom: none;
+            background-color: #ffffff; /* Fundo branco ou levemente azulado */
+            width: 25%; /* Largura da barra */
+            padding: 25px 20px;
+            border: 1px solid #b0c4de;
+            min-height: 250px;
         }
 
         .sidebar ul {
-            list-style-position: inside; /* Mantém as bolinhas alinhadas dentro */
+            list-style-position: inside;
         }
 
         .sidebar li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #333;
         }
 
         /* 3. Conteúdo Principal (Direita) */
         .content {
-            background-color: #f9fbfd;
-            width: 75%; /* Ocupa os 75% restantes */
-            padding: 20px;
-            border: 2px solid #ff3333;
-            border-left: none; /* Evita borda dupla com a barra lateral */
-            border-bottom: none;
+            background-color: #ffffff;
+            width: 75%; /* Ocupa o restante do espaço */
+            padding: 25px;
+            border: 1px solid #b0c4de;
         }
 
         .content p {
             margin-bottom: 15px;
+            color: #333;
+            line-height: 1.5;
         }
 
-        /* 4. Rodapé (Escuro) */
+        /* 4. Rodapé (Azul Escuro) */
         .footer {
-            background-color: #1a252f;
+            background-color: #1a252f; /* Azul escuro/grafite */
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             font-size: 14px;
-            border: 2px solid #ff3333;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="moldura-principal">
+        
         <div class="header">
             Minha Página Web
         </div>
@@ -112,6 +117,7 @@
         <div class="footer">
             Rodapé da Página
         </div>
+
     </div>
 
 </body>
