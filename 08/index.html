@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Notícias</title>
+    <style>
+        /* --- Configurações do Box Model --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container que segura toda a galeria */
+        .galeria-container {
+            max-width: 900px;
+            width: 100%;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        /* --- Alinhamento dos Cards (Grid da Galeria) --- */
+        .grid-noticias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px; /* Espaçamento entre os blocos */
+            margin-bottom: 20px;
+        }
+
+        /* Cada bloco de notícia/imagem */
+        .card-noticia {
+            flex: 1 1 calc(33.333% - 15px); /* Divide em 3 colunas iguais */
+            min-width: 250px; /* Garante que fique responsivo em telas menores */
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #fafafa;
+        }
+
+        /* Estilização da imagem dentro do box */
+        .card-noticia img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover; /* Faz a imagem cortar sem distorcer */
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* Texto de legenda/resumo abaixo da imagem */
+        .card-noticia .legenda {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* --- Bloco de Texto Inferior (Lorem Ipsum) --- */
+        .texto-inferior {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            text-align: justify;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria-container">
+        
+        <div class="grid-noticias">
+            
+            <div class="card-noticia">
+                <img src="COLOQUE_AQUI_A_IMAGEM_1.jpg" alt="Notícia 1">
+                <div class="legenda">Resumo</div>
+            </div>
+
+            <div class="card-noticia">
+                <img src="COLOQUE_AQUI_A_IMAGEM_2.jpg" alt="Notícia 2">
+                <div class="legenda">Resumo</div>
+            </div>
+
+            <div class="card-noticia">
+                <img src="COLOQUE_AQUI_A_IMAGEM_3.jpg" alt="Notícia 3">
+                <div class="legenda">Resumo</div>
+            </div>
+
+            <div class="card-noticia">
+                <img src="COLOQUE_AQUI_A_IMAGEM_4.jpg" alt="Notícia 4">
+                <div class="legenda">Resumo</div>
+            </div>
+
+            <div class="card-noticia">
+                <img src="COLOQUE_AQUI_A_IMAGEM_5.jpg" alt="Notícia 5">
+                <div class="legenda">Resumo</div>
+            </div>
+
+            </div>
+
+        <div class="texto-inferior">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nulla lectus. Quisque est nisl, efficitur id justo ac, convallis rhoncus. Duis vel volutpat nisl. Etiam tortor nunc, efficitur non sapien ac, fringilla imperdiet dui. Nam blandit leo non justo euismod facilisis. Donec imperdiet quam blandit nunc elementum aliquam. Duis interdum dolor sit amet mi placerat sodales. Aenean dui mi, congue ac pellentesque ut, porta vitae elit. Maecenas non elementum nisl, a posuere nunc. Aenean scelerisque libero sed ex vulputate, quis auctor purus consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et nulla lectus. Cras ut mi sit amet justo vulputate finibus. Mauris euismod porta aliquam. Mauris ut justo ut est consectetur rhoncus. Duis vel volutpat nisl. Etiam tortor nunc, efficitur non sapien ac, fringilla imperdiet dui. Nam blandit leo non justo euismod facilisis.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
