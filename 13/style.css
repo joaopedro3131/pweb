@@ -36,14 +36,14 @@ body {
 .petala.vermelha {
   background-color: #e15554;
   top: 0;
-  right: 0;
+  left: 0;
   border-radius: 80px 0 80px 0;
 }
 
 .petala.amarela {
   background-color: #e1bc4c;
   top: 0;
-  left: 0;
+  right: 0;
   border-radius: 0 0 0 80px;
 }
 
