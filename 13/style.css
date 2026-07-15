@@ -39,28 +39,61 @@
     margin: 40px;
 }
 
-/* --- FORMA 1: AS 4 PÉTALAS --- */
-.petala {
-    width: 100px;
-    height: 100px;
+/* Container que centraliza as pétalas juntas */
+.container-helice {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    margin: 60px;
+    display: inline-block;
 }
-/* Arredonda apenas os cantos externos opostos de cada quadrado */
-.verde {
-    background-color: #1e824c;
-    border-radius: 100% 0 100% 0;
+
+/* Base de todas as pétalas: formato oval perfeito */
+.petala-oval {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    border-radius: 50%; /* Faz o formato de elipse/ovo */
 }
+
+/* PÉTALA 1: VERMELHA (Inclinada para a esquerda no topo) */
 .vermelha {
     background-color: #e74c3c;
-    border-radius: 0 100% 0 100%;
+    top: 10px;
+    left: 45px;
+    transform: rotate(-30deg);
+    transform-origin: bottom right; /* Fixa a ponta no centro */
 }
-.roxa {
-    background-color: #9b59b6;
-    border-radius: 0 100% 0 100%;
-}
+
+/* PÉTALA 2: AMARELA (Inclinada para a direita no topo) */
 .amarela {
     background-color: #f1c40f;
-    border-radius: 100% 0 100% 0;
+    top: 10px;
+    right: 45px;
+    transform: rotate(30deg);
+    transform-origin: bottom left;  /* Fixa a ponta no centro */
 }
+
+/* PÉTALA 3: VERDE (Inclinada para a esquerda embaixo) */
+.verde {
+    background-color: #1e824c;
+    bottom: 10px;
+    left: 45px;
+    transform: rotate(30deg);
+    transform-origin: top right;    /* Fixa a ponta no centro */
+}
+
+/* PÉTALA 4: ROXA (Inclinada para a direita embaixo) */
+.roxa {
+    background-color: #9b59b6;
+    bottom: 10px;
+    right: 45px;
+    transform: rotate(-30deg);
+    transform-origin: top left;     /* Fixa a ponta no centro */
+}
+
+
+
 
 /* --- FORMA 2: O CÍRCULO DIVIDIDO --- */
 .fatia {
