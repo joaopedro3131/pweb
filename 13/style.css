@@ -1,105 +1,100 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    text-align: center;
+/* Configurações gerais da página */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin: 40px;
+/* Container principal para alinhar as duas figuras horizontalmente */
+.layout-container {
+  display: flex;
+  align-items: center;
+  gap: 80px; /* Distância/espaço entre a flor e o círculo */
 }
 
-/* ---------- Exercício Border Radius ---------- */
 
-.flor{
-    width:200px;
-    display:flex;
-    flex-wrap:wrap;
+/* ==========================================================================
+   FIGURA 1: A FLOR (Pétalas em posições absolutas)
+   ========================================================================== */
+.flor-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
 }
 
-.petala{
-    width:100px;
-    height:100px;
+.petala {
+  position: absolute;
+  width: 80px;
+  height: 80px;
 }
 
-.vermelho{
-    background:red;
-    -webkit-border-radius:50px 0 50px 50px;
-    -moz-border-radius:50px 0 50px 50px;
-    border-radius:50px 0 50px 50px;
+/* Efeito da Flor: Arredonda apenas os cantos diagonais opostos */
+.petala.vermelha {
+  background-color: #e15554;
+  top: 0;
+  left: 0;
+  border-radius: 80px 0 80px 0;
 }
 
-.amarelo{
-    background:gold;
-    -webkit-border-radius:0 50px 50px 50px;
-    -moz-border-radius:0 50px 50px 50px;
-    border-radius:0 50px 50px 50px;
+.petala.amarela {
+  background-color: #e1bc4c;
+  top: 0;
+  right: 0;
+  border-radius: 0 80px 0 80px;
 }
 
-.verde{
-    background:green;
-    -webkit-border-radius:50px 50px 50px 0;
-    -moz-border-radius:50px 50px 50px 0;
-    border-radius:50px 50px 50px 0;
+.petala.verde {
+  background-color: #1d9a56;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 80px 0 80px;
 }
 
-.roxo{
-    background:purple;
-    -webkit-border-radius:50px 50px 0 50px;
-    -moz-border-radius:50px 50px 0 50px;
-    border-radius:50px 50px 0 50px;
+.petala.roxa {
+  background-color: #7b2cbf;
+  bottom: 0;
+  right: 0;
+  border-radius: 80px 0 80px 0;
 }
 
-/* Círculo */
 
-.circulo{
-    width:200px;
-    display:flex;
-    flex-wrap:wrap;
+/* ==========================================================================
+   FIGURA 2: O CÍRCULO DIVIDIDO (Fatias organizadas em uma grade de 2x2)
+   ========================================================================== */
+.circulo-container {
+  display: grid;
+  grid-template-columns: 80px 80px;
+  grid-template-rows: 80px 80px;
+  width: 160px;
+  height: 160px;
 }
 
-.parte{
-    width:100px;
-    height:100px;
+.fatia {
+  width: 80px;
+  height: 80px;
 }
 
-.circulo .vermelho{
-    border-radius:100% 0 0 0;
+/* Efeito do Círculo: Arredonda apenas o canto externo de cada fatia */
+.fatia.vermelha {
+  background-color: #e15554;
+  border-radius: 80px 0 0 0;
 }
 
-.circulo .amarelo{
-    border-radius:0 100% 0 0;
+.fatia.amarela {
+  background-color: #e1bc4c;
+  border-radius: 0 80px 0 0;
 }
 
-.circulo .verde{
-    border-radius:0 0 0 100%;
+.fatia.verde {
+  background-color: #1d9a56;
+  border-radius: 0 0 0 80px;
 }
 
-.circulo .roxo{
-    border-radius:0 0 100% 0;
-}
-
-/* ---------- Exercício Box Sizing ---------- */
-
-.caixa{
-
-    width:300px;
-    height:150px;
-
-    padding:20px;
-    margin:40px auto;
-
-    border:10px solid blue;
-
-    background:#b9c941;
-
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-}
-
-hr{
-    margin:50px 0;
+.fatia.roxa {
+  background-color: #7b2cbf;
+  border-radius: 0 0 80px 0;
 }

@@ -1,60 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios CSS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Exercício CSS3 - Figuras Lado a Lado</title>
+  <!-- Link que conecta com o arquivo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Exercícios de CSS</h1>
-</header>
+  <!-- Container principal que segura as duas figuras lado a lado -->
+  <div class="layout-container">
 
-<!-- Exercício 1 -->
-<section>
-
-    <h2>Exercício 1 - Border Radius</h2>
-
-    <p>Figura 1</p>
-
-    <section class="container">
-
-        <section class="flor">
-            <article class="petala vermelho"></article>
-            <article class="petala amarelo"></article>
-            <article class="petala verde"></article>
-            <article class="petala roxo"></article>
-        </section>
-
-        <section class="circulo">
-            <article class="parte vermelho"></article>
-            <article class="parte amarelo"></article>
-            <article class="parte verde"></article>
-            <article class="parte roxo"></article>
-        </section>
-
-    </section>
-
-</section>
-
-<hr>
-
-<!-- Exercício 2 -->
-
-<section>
-
-    <h2>Exercício 2 - Box Sizing</h2>
-
-    <div class="caixa">
-        <p>
-            Esta caixa utiliza a propriedade
-            <strong>box-sizing: border-box</strong>.
-        </p>
+    <!-- FIGURA 1: A FLOR -->
+    <div class="flor-container">
+      <div class="petala vermelha"></div>
+      <div class="petala amarela"></div>
+      <div class="petala verde"></div>
+      <div class="petala roxa"></div>
     </div>
 
-</section>
+    <!-- FIGURA 2: O CÍRCULO DIVIDIDO -->
+    <div class="circulo-container">
+      <div class="fatia vermelha"></div>
+      <div class="fatia amarela"></div>
+      <div class="fatia verde"></div>
+      <div class="fatia roxa"></div>
+    </div>
+
+  </div>
 
 </body>
 </html>
