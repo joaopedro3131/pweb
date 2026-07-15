@@ -1,0 +1,85 @@
+/* ==========================================================================
+   EXERCÍCIO 1: BOX-SIZING (Mantido do passo anterior)
+   ========================================================================== */
+.caixa {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    border: 10px solid #333;
+    margin-bottom: 20px;
+    background-color: lightblue;
+    border-radius: 8px; 
+}
+.caixa-antiga {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.caixa-nova {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   EXERCÍCIO 2: FORMAS GEOMÉTRICAS (Efeito da imagem)
+   ========================================================================== */
+
+/* Configuração dos containers para alinhar em grade (2x2) */
+.container-flor, .container-circulo {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 5px;
+    margin: 40px;
+}
+
+/* --- PARTE 1: A FLOR / HÉLICE --- */
+.petala {
+    width: 100px;
+    height: 100px;
+}
+/* Arredonda cantos opostos para fazer o formato de folha/pétala */
+.verde {
+    background-color: #1e824c;
+    border-radius: 100px 0 100px 0;
+}
+.vermelha {
+    background-color: #e74c3c;
+    border-radius: 0 100px 0 100px;
+}
+.roxa {
+    background-color: #9b59b6;
+    border-radius: 0 100px 0 100px;
+}
+.amarela {
+    background-color: #f1c40f;
+    border-radius: 100px 0 100px 0;
+}
+
+/* --- PARTE 2: O CÍRCULO DIVIDIDO --- */
+/* Remove o espaço entre as fatias para fechar o círculo perfeito */
+.container-circulo {
+    gap: 0px; 
+}
+.fatia {
+    width: 100px;
+    height: 100px;
+}
+/* Cada quadrado arredonda apenas o canto externo para formar 1/4 de círculo */
+.verde-c {
+    background-color: #1e824c;
+    border-radius: 100px 0 0 0;
+}
+.vermelha-c {
+    background-color: #e74c3c;
+    border-radius: 0 100px 0 0;
+}
+.roxa-c {
+    background-color: #9b59b6;
+    border-radius: 0 0 0 100px;
+}
+.amarela-c {
+    background-color: #f1c40f;
+    border-radius: 0 0 100px 0;
+}
