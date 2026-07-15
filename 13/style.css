@@ -44,7 +44,7 @@ body {
   background-color: #e1bc4c;
   top: 0;
   right: 0;
-  border-radius: 0 0 0 80px;
+  border-radius: 60px 80px 60px 0;
 }
 
 .petala.verde {
