@@ -44,14 +44,14 @@ body {
   background-color: #e1bc4c;
   top: 0;
   left: 0;
-  border-radius: 0 80px 0 80px;
+  border-radius: 0 0 0 80px;
 }
 
 .petala.verde {
   background-color: #1d9a56;
   bottom: 0;
   right: 0;
-  border-radius: 0 80px 0 80px;
+  border-radius: 0 0 0 80px;
 }
 
 .petala.roxa {
