@@ -1,119 +1,81 @@
-/* ==========================================================================
-   EXERCÍCIO 1: BOX-SIZING (CORRIGIDO VISUALMENTE)
-   ========================================================================== */
-.caixa {
-    width: 300px;
-    height: 100px;
-    padding: 30px;          /* Espaço interno grande para forçar o desalinhamento */
-    border: 15px solid red; /* Borda grossa vermelha para destacar a diferença */
-    margin-bottom: 25px;
-    background-color: lightblue;
-    color: black;
-    font-weight: bold;
+body{
+    font-family: Arial;
+    text-align:center;
 }
 
-/* Caixa com tamanho antigo (Soma largura + padding + borda = 390px de largura) */
-.caixa-antiga {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+.container{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin-top:50px;
 }
 
-/* Caixa moderna (Comprime tudo para dentro dos 300px estipulados) */
-.caixa-nova {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+/* Primeira figura */
+
+.flor{
+    width:200px;
+    height:200px;
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
 }
 
-/* ==========================================================================
-   EXERCÍCIO 2: FORMAS GEOMÉTRICAS (4 PÉTALAS E CÍRCULO FECHADO)
-   ========================================================================== */
-
-/* Configuração comum para juntar as formas em blocos de 2x2 sem buracos */
-.container-flor, .container-circulo {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 100px);
-    grid-template-rows: repeat(2, 100px);
-    gap: 0px; /* Zera qualquer espaço interno para unir as pontas no centro */
-    margin: 40px;
+.flor div{
+    width:100px;
+    height:100px;
 }
 
-/* Container que centraliza as pétalas juntas */
-.container-helice {
-    position: relative;
-    width: 240px;
-    height: 240px;
-    margin: 60px;
-    display: inline-block;
+.vermelho{
+    background:red;
+    border-radius:60px 0 60px 60px;
 }
 
-/* Base de todas as pétalas: formato oval perfeito */
-.petala-oval {
-    position: absolute;
-    width: 80px;
-    height: 120px;
-    border-radius: 50%; /* Faz o formato de elipse/ovo */
+.amarelo{
+    background:gold;
+    border-radius:0 60px 60px 60px;
 }
 
-/* PÉTALA 1: VERMELHA (Inclinada para a esquerda no topo) */
-.vermelha {
-    background-color: #e74c3c;
-    top: 10px;
-    left: 45px;
-    transform: rotate(-30deg);
-    transform-origin: bottom right; /* Fixa a ponta no centro */
+.verde{
+    background:green;
+    border-radius:60px 60px 60px 0;
 }
 
-/* PÉTALA 2: AMARELA (Inclinada para a direita no topo) */
-.amarela {
-    background-color: #f1c40f;
-    top: 10px;
-    right: 45px;
-    transform: rotate(30deg);
-    transform-origin: bottom left;  /* Fixa a ponta no centro */
+.roxo{
+    background:purple;
+    border-radius:60px 60px 0 60px;
 }
 
-/* PÉTALA 3: VERDE (Inclinada para a esquerda embaixo) */
-.verde {
-    background-color: #1e824c;
-    bottom: 10px;
-    left: 45px;
-    transform: rotate(30deg);
-    transform-origin: top right;    /* Fixa a ponta no centro */
+/* Segunda figura */
+
+.circulo{
+    width:200px;
+    height:200px;
+    display:grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows:100px 100px;
 }
 
-/* PÉTALA 4: ROXA (Inclinada para a direita embaixo) */
-.roxa {
-    background-color: #9b59b6;
-    bottom: 10px;
-    right: 45px;
-    transform: rotate(-30deg);
-    transform-origin: top left;     /* Fixa a ponta no centro */
+.circulo div{
+    width:100px;
+    height:100px;
 }
 
+.q1{
+    background:red;
+    border-radius:100% 0 0 0;
+}
 
+.q2{
+    background:gold;
+    border-radius:0 100% 0 0;
+}
 
+.q3{
+    background:green;
+    border-radius:0 0 0 100%;
+}
 
-/* --- FORMA 2: O CÍRCULO DIVIDIDO --- */
-.fatia {
-    width: 100px;
-    height: 100px;
-}
-/* Arredonda apenas uma das pontas externas para simular fatias de pizza */
-.verde-c {
-    background-color: #1e824c;
-    border-radius: 100% 0 0 0;
-}
-.vermelha-c {
-    background-color: #e74c3c;
-    border-radius: 0 100% 0 0;
-}
-.roxa-c {
-    background-color: #9b59b6;
-    border-radius: 0 0 0 100%;
-}
-.amarela-c {
-    background-color: #f1c40f;
-    border-radius: 0 0 100% 0;
+.q4{
+    background:purple;
+    border-radius:0 0 100% 0;
 }
