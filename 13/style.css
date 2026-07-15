@@ -51,14 +51,14 @@ body {
   background-color: #1d9a56;
   bottom: 0;
   right: 0;
-  border-radius: 0 0 0 80px;
+  border-radius: 0 60px 80px 60px;
 }
 
 .petala.roxa {
   background-color: #7b2cbf;
   bottom: 0;
   left:  0;
-  border-radius: 80px 0 80px 0;
+  border-radius: 60px 0 60px 80px;
 }
 
 
