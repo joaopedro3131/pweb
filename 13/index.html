@@ -2,21 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Exercícios de CSS</title>
+    <title>Exercícios de CSS - Box-Sizing e Border-Radius</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <h1>Exercício 1: Box-Sizing</h1>
-    <div class="caixa caixa-antiga">SEM border-box</div>
-    <div class="caixa caixa-nova">COM border-box</div>
+    <!-- Caixa que estoura o tamanho por não usar border-box -->
+    <div class="caixa caixa-antiga">SEM border-box (Estoura para 390px)</div>
+    <!-- Caixa com tamanho correto e controlado -->
+    <div class="caixa caixa-nova">COM border-box (Mantém 300px exatos)</div>
 
     <hr>
 
     <h1>Exercício 2: Efeitos com Border-Radius</h1>
     
-    <!-- Container da Flor/Hélice -->
+    <!-- 4 Pétalas se tocando perfeitamente no centro -->
     <div class="container-flor">
         <div class="petala verde"></div>
         <div class="petala vermelha"></div>
@@ -24,7 +26,7 @@
         <div class="petala amarela"></div>
     </div>
 
-    <!-- Container do Círculo Dividido -->
+    <!-- Círculo dividido em 4 partes coladas -->
     <div class="container-circulo">
         <div class="fatia verde-c"></div>
         <div class="fatia vermelha-c"></div>

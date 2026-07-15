@@ -1,20 +1,25 @@
 /* ==========================================================================
-   EXERCÍCIO 1: BOX-SIZING (Mantido do passo anterior)
+   EXERCÍCIO 1: BOX-SIZING (CORRIGIDO VISUALMENTE)
    ========================================================================== */
 .caixa {
     width: 300px;
     height: 100px;
-    padding: 20px;
-    border: 10px solid #333;
-    margin-bottom: 20px;
+    padding: 30px;          /* Espaço interno grande para forçar o desalinhamento */
+    border: 15px solid red; /* Borda grossa vermelha para destacar a diferença */
+    margin-bottom: 25px;
     background-color: lightblue;
-    border-radius: 8px; 
+    color: black;
+    font-weight: bold;
 }
+
+/* Caixa com tamanho antigo (Soma largura + padding + borda = 390px de largura) */
 .caixa-antiga {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
+
+/* Caixa moderna (Comprime tudo para dentro dos 300px estipulados) */
 .caixa-nova {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -22,64 +27,60 @@
 }
 
 /* ==========================================================================
-   EXERCÍCIO 2: FORMAS GEOMÉTRICAS (Efeito da imagem)
+   EXERCÍCIO 2: FORMAS GEOMÉTRICAS (4 PÉTALAS E CÍRCULO FECHADO)
    ========================================================================== */
 
-/* Configuração dos containers para alinhar em grade (2x2) */
+/* Configuração comum para juntar as formas em blocos de 2x2 sem buracos */
 .container-flor, .container-circulo {
     display: inline-grid;
     grid-template-columns: repeat(2, 100px);
     grid-template-rows: repeat(2, 100px);
-    gap: 5px;
+    gap: 0px; /* Zera qualquer espaço interno para unir as pontas no centro */
     margin: 40px;
 }
 
-/* --- PARTE 1: A FLOR / HÉLICE --- */
+/* --- FORMA 1: AS 4 PÉTALAS --- */
 .petala {
     width: 100px;
     height: 100px;
 }
-/* Arredonda cantos opostos para fazer o formato de folha/pétala */
+/* Arredonda apenas os cantos externos opostos de cada quadrado */
 .verde {
     background-color: #1e824c;
-    border-radius: 100px 0 100px 0;
+    border-radius: 100% 0 100% 0;
 }
 .vermelha {
     background-color: #e74c3c;
-    border-radius: 0 100px 0 100px;
+    border-radius: 0 100% 0 100%;
 }
 .roxa {
     background-color: #9b59b6;
-    border-radius: 0 100px 0 100px;
+    border-radius: 0 100% 0 100%;
 }
 .amarela {
     background-color: #f1c40f;
-    border-radius: 100px 0 100px 0;
+    border-radius: 100% 0 100% 0;
 }
 
-/* --- PARTE 2: O CÍRCULO DIVIDIDO --- */
-/* Remove o espaço entre as fatias para fechar o círculo perfeito */
-.container-circulo {
-    gap: 0px; 
-}
+/* --- FORMA 2: O CÍRCULO DIVIDIDO --- */
 .fatia {
     width: 100px;
     height: 100px;
 }
-/* Cada quadrado arredonda apenas o canto externo para formar 1/4 de círculo */
+/* Arredonda apenas uma das pontas externas para simular fatias de pizza */
 .verde-c {
     background-color: #1e824c;
-    border-radius: 100px 0 0 0;
+    border-radius: 100% 0 0 0;
 }
 .vermelha-c {
     background-color: #e74c3c;
-    border-radius: 0 100px 0 0;
+    border-radius: 0 100% 0 0;
 }
 .roxa-c {
     background-color: #9b59b6;
-    border-radius: 0 0 0 100px;
+    border-radius: 0 0 0 100%;
 }
 .amarela-c {
     background-color: #f1c40f;
-    border-radius: 0 0 100px 0;
+    border-radius: 0 0 100% 0;
 }
