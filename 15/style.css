@@ -1,0 +1,33 @@
+.box {
+    position: relative;
+    margin: 100px auto; 
+    width: 150px;
+    height: 150px;
+    background: red;
+    animation-name: girarEColorir;
+    animation-duration: 40s;         
+    animation-iteration-count: infinite; 
+}
+
+@keyframes girarEColorir {
+    0% {
+        transform: rotate(0deg);
+        background: red;
+    }
+    25% {
+        transform: rotate(90deg);
+        background: blue;
+    }
+    50% {
+        transform: rotate(180deg);
+        background: green;
+    }
+    75% {
+        transform: rotate(270deg);
+        background: yellow;
+    }
+    100% {
+        transform: rotate(360deg);
+        background: red;
+    }
+}
