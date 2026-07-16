@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 12 - Atributo Data</title>
+    
+    <!-- 1. JavaScript dos Exercícios Anteriores -->
+    <script type="text/javascript">
+        // Função do exercício anterior: exibe a idade no alert
+        function mostravalor(componente) {
+            var valor = componente.getAttribute('data-idade');
+            alert("Idade: " + valor);
+        }
+
+        // Função modificada do outro exercício: exibe o nome da pessoa no alert
+        function mostranome(componente) {
+            var nome = componente.textContent;
+            // Usamos split ou limpamos o texto se o CSS adicionar conteúdo, 
+            // mas o textContent puro pegará o texto base do elemento HTML.
+            alert(nome);
+        }
+    </script>
+
+    <!-- 2. CSS com a função attr() para o último exercício -->
+    <style>
+        /* Estilização básica para as cores da lista conforme o slide */
+        li.pessoa {
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Define a cor vermelha para o primeiro e terceiro item */
+        li.pessoa:nth-child(odd) {
+            color: #d9534f; /* Vermelho/Rosa do slide */
+        }
+
+        /* Define a cor azul para o segundo item */
+        li.pessoa:nth-child(even) {
+            color: #0275d8; /* Azul do slide */
+        }
+
+        /* 
+           O PULO DO GATO:
+           Usamos o seletor ::after para inserir conteúdo dinâmico no final de cada <li>.
+           A função attr() do CSS pega os valores de 'data-idade' e 'data-cpf' do HTML!
+        */
+        li.pessoa::after {
+            content: " - Idade: " attr(data-idade) " Anos - C.P.F: " attr(data-cpf);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exercício: Atributos Customizados</h1>
+
+    <ul>
+        <!-- 
+          Estrutura HTML atualizada com:
+          - class="pessoa" para o CSS
+          - onclick que chama a função JavaScript desejada
+          - Atributos customizados: data-idade e data-cpf
+        -->
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="20" data-cpf="999">Nome: João</li>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="30" data-cpf="888">Nome: José</li>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="40" data-cpf="777">Nome: Maria</li>
+    </ul>
+
+</body>
+</html>
