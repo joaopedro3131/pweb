@@ -1,0 +1,28 @@
+body{
+    margin-top:40px;
+    background-color:#f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+.caixa{
+    border:1px solid #ddd;
+    padding:30px;
+    background-color:#fff;
+    border-radius:5px;
+}
+
+.tabela{
+    margin-top:40px;
+}
+
+.btn{
+    margin-top:10px;
+}
